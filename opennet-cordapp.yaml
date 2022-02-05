@@ -1,0 +1,23 @@
+nodes:
+  AlphaCom:
+    debug: true
+    x500: "C=US, L=Seattle, O=Alpha, OU=Com"
+    users:
+      alpha:
+        password: alpha
+        permissions: [ "ALL" ]
+  BetaCom:
+    x500: "C=US, L=Los Angeles, O=Beta, OU=Com"
+    users:
+      beta:
+        password: beta
+        permissions: [ "ALL" ]
+  GammaIO:
+    x500: "C=US, L=Los Angeles, O=Gamma, OU=IO"
+    users:
+      gamma:
+        password: gamma
+        permissions: [ "ALL" ]
+  Zed:
+    x500: "C=US, L=Seattle, O=Notary"
+    notary: true
