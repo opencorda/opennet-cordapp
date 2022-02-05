@@ -4,7 +4,7 @@ import net.corda.v5.ledger.contracts.CommandData
 import net.corda.v5.ledger.contracts.Contract
 import net.corda.v5.ledger.contracts.requireThat
 import net.corda.v5.ledger.transactions.LedgerTransaction
-import net.corda.v5.ledger.transactions.outputsOfType
+// import net.corda.v5.ledger.transactions.outputsOfType
 import org.opencorda.opennet.states.Collaboration
 
 class CollaborationContract: Contract {
@@ -28,14 +28,14 @@ class CollaborationContract: Contract {
         when(commandData) {
 
             is Commands.Create -> requireThat {
-                val output = tx.outputsOfType(Collaboration::class.java)[0]
+                // val output = tx.outputsOfType(Collaboration::class.java)[0]
                 "There should only ever be a single output of a collaboration".using(tx.outputs.size == 1)
                 "The Collaboration must have a description".using(tx.outputsOfType(Collaboration::class.java)[0].description != "")
                 null
             }
 
             is Commands.AddOperation -> requireThat {
-                val output = tx.outputsOfType(Collaboration::class.java)[0]
+                // val output = tx.outputsOfType(Collaboration::class.java)[0]
                 "There should only ever be a single output of a collaboration".using(tx.outputs.size == 1)
                 null
             }

@@ -1,4 +1,5 @@
 nodes:
+
   AlphaCom:
     debug: true
     x500: "C=US, L=Seattle, O=Alpha, OU=Com"
